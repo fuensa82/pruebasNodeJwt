@@ -1,12 +1,12 @@
 var mysql = require('mysql');
 
-function getListaUsuarios(){
-    
+function getListaUsuarios(req,res){
+    res.json({nombre:"Lista de usuarios"});
 }
-function getUsuario(){
+function getUsuario(req,res){
 
 }
-function crearUsuario(){
+function crearUsuario(req,res){
 
 }
 module.exports={

@@ -12,9 +12,7 @@ app.use(methodOverride());
 
 var router = express.Router();
 
-router.get('/', function(req, res) {  
-   res.json({nombre:"Victor"});
-});
+router.get('/', usuarios.getListaUsuarios);
 
 router.get('/libros', function(req, res) {  
    
