@@ -1,16 +1,15 @@
 var mysql = require('mysql');
 
 function getListaUsuarios(req,res){
-    
-    conectar().connect(function(err){
-        if (err) throw err;
-        var sql="select idProfesor from profesores";// where nombreCorto='"+profesor.nombreCorto+"'";
-        var result=connect.query(sql, function (err, result, fields){
-            res.json({result});
-        });
+    var con = conectar();
+    con.connect();
+    var sql="select * from profesores";// where nombreCorto='"+profesor.nombreCorto+"'";
+    var result=con.query(sql, function (err, result, fields){
+        res.json({result});
     });
     
 }
+
 function getUsuario(req,res){
 
 }
